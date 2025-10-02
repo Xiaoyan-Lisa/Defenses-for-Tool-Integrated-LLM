@@ -1,0 +1,30 @@
+injection_method: direct_prompt_injection
+attack_tool:
+  - all
+  # - agg
+  # - non-agg
+
+write_db: false 
+
+llms:
+  - gpt-4o-mini
+  - gpt-3.5-turbo
+  - ollama/qwen2:7b
+  - ollama/gemma2:9b
+  - ollama/llama3:8b
+  - ollama/llama3.1:8b
+
+attack_types:
+  - context_ignoring
+  - fake_completion
+  - escape_characters
+  - naive
+
+# defense_type: dynamic_prompt_rewriting 
+
+tool_defense: NTR # ATF, NTR
+
+reflection: false # false
+  
+task_rewriting: true
+
